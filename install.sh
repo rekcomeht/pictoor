@@ -35,4 +35,4 @@ sudo apt-get install python3-numpy
 sudo pip3 install RPi.GPIO
 sudo pip3 install spidev
 
-sudo apt-get install imagemagick
+sudo apt-get install imagemagick -y
