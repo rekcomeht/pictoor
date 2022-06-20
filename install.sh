@@ -36,3 +36,4 @@ sudo pip3 install RPi.GPIO
 sudo pip3 install spidev
 
 sudo apt-get install imagemagick -y
+sudo cp ~/pictoor/wpa_supplicant.conf /etc/wpa_supplicant/
