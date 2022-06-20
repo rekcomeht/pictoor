@@ -23,7 +23,7 @@ try:
     epd.init()
   
     logging.info("3.read bmp file")
-    Himage = Image.open(os.path.join(picdir, '7in5_V2.bmp'))
+    Himage = Image.open(os.path.join(picdir, 'pupper.bmp'))
     epd.display(epd.getbuffer(Himage))
     time.sleep(2)
 
