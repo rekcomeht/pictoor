@@ -38,7 +38,6 @@ try:
     draw = ImageDraw.Draw(Limage)
     draw.text((20, 25), 'my ip address is', font = font18, fill = 0)
     draw.text((20, 50), str(ipadd), font = font18, fill = 0)
-    draw.rectangle((10, 90, 60, 140), outline = 0)
     epd.display(epd.getbuffer(Limage))
  
 
