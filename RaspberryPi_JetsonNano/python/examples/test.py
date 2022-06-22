@@ -15,6 +15,13 @@ import traceback
 
 logging.basicConfig(level=logging.DEBUG)
 
+def picdisplay(fname):
+    epd=epd7in5_V2.EPD()
+    epd.init()
+    Himage = Image.open(os.path.join(picdir,  fname+'.bmp'))
+    epd.display(epd.getbuffer(Himage))
+    epd.sleep()
+
 try:
     logging.info("epd7in5_V2 Demo")
     epd = epd7in5_V2.EPD()
