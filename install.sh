@@ -40,6 +40,7 @@ sudo chmod u+x ~/pictoor/RaspberryPi_JetsonNano/python/examples/boot.py
 sudo chmod u+x ~/pictoor/RaspberryPi_JetsonNano/python/examples/test.py
 sudo chmod u+x ~/pictoor/RaspberryPi_JetsonNano/python/examples/blerp.py
 sudo pip3 install bottle
+sudo pip install bottle
 
 crontab -l > mycron
 echo "@reboot sleep 30 && /home/nox/pictoor/RaspberryPi_JetsonNano/python/examples/boot.py" >> mycron
