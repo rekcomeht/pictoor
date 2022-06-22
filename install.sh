@@ -21,14 +21,13 @@ cd WiringPi
 gpio -v
 # Run gpio -v and version 2.60 will appear. If it does not appear, it means that there is an installation error
 
- sudo apt-get update
- sudo apt-get install python-pip
- sudo apt-get install python-pil
- sudo apt-get install python-numpy
- sudo pip install RPi.GPIO
- sudo pip install spidev
+sudo apt-get update
+sudo apt-get install python-pip
+sudo apt-get install python-pil
+sudo apt-get install python-numpy
+sudo pip install RPi.GPIO
+sudo pip install spidev
  
- sudo apt-get update
 sudo apt-get install python3-pip
 sudo apt-get install python3-pil
 sudo apt-get install python3-numpy
@@ -45,3 +44,10 @@ sudo chmod u+x ~/pictoor/RaspberryPi_JetsonNano/python/examples/pic_3
 sudo cp ~/pictoor/ipdisplay.service /etc/systemd/system/
 sudo touch touch /etc/systemd/system/ipdisplay.service
 sudo systemctl enable ipdisplay.service
+
+crontab -l > mycron
+echo @reboot sleep 30 && /home/nox/pictoor/RaspberryPi_JetsonNano/python/examples/boot.py >> mycron
+crontab mycron
+rm mycron
+
+sudo pip3 install bottle
