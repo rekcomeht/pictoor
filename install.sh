@@ -38,15 +38,11 @@ sudo apt-get install imagemagick -y
 sudo cp ~/pictoor/wpa_supplicant.conf /etc/wpa_supplicant/
 sudo chmod u+x ~/pictoor/RaspberryPi_JetsonNano/python/examples/boot.py
 sudo chmod u+x ~/pictoor/RaspberryPi_JetsonNano/python/examples/test.py
-sudo chmod u+x ~/pictoor/RaspberryPi_JetsonNano/python/examples/pic_1
-sudo chmod u+x ~/pictoor/RaspberryPi_JetsonNano/python/examples/pic_2
-sudo chmod u+x ~/pictoor/RaspberryPi_JetsonNano/python/examples/pic_3
-sudo cp ~/pictoor/ipdisplay.service /etc/systemd/system/
-sudo touch touch /etc/systemd/system/ipdisplay.service
-sudo systemctl enable ipdisplay.service
+sudo chmod u+x ~/pictoor/RaspberryPi_JetsonNano/python/examples/blerp.py
 
 crontab -l > mycron
 echo @reboot sleep 30 && /home/nox/pictoor/RaspberryPi_JetsonNano/python/examples/boot.py >> mycron
+echo @reboot sleep 60 && /home/nox/pictoor/RaspberryPi_JetsonNano/python/examples/blerp.py >> mycron
 crontab mycron
 rm mycron
 
