@@ -42,8 +42,8 @@ sudo chmod u+x ~/pictoor/RaspberryPi_JetsonNano/python/examples/blerp.py
 sudo pip3 install bottle
 
 crontab -l > mycron
-echo @reboot sleep 30 && /home/nox/pictoor/RaspberryPi_JetsonNano/python/examples/boot.py >> mycron
-echo @reboot sleep 60 && /home/nox/pictoor/RaspberryPi_JetsonNano/python/examples/blerp.py >> mycron
+echo "@reboot sleep 30 && /home/nox/pictoor/RaspberryPi_JetsonNano/python/examples/boot.py" >> mycron
+echo "@reboot sleep 60 && /home/nox/pictoor/RaspberryPi_JetsonNano/python/examples/blerp.py" >> mycron
 crontab mycron
 rm mycron
 
