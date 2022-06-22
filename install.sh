@@ -39,6 +39,7 @@ sudo cp ~/pictoor/wpa_supplicant.conf /etc/wpa_supplicant/
 sudo chmod u+x ~/pictoor/RaspberryPi_JetsonNano/python/examples/boot.py
 sudo chmod u+x ~/pictoor/RaspberryPi_JetsonNano/python/examples/test.py
 sudo chmod u+x ~/pictoor/RaspberryPi_JetsonNano/python/examples/blerp.py
+sudo pip3 install bottle
 
 crontab -l > mycron
 echo @reboot sleep 30 && /home/nox/pictoor/RaspberryPi_JetsonNano/python/examples/boot.py >> mycron
@@ -46,4 +47,4 @@ echo @reboot sleep 60 && /home/nox/pictoor/RaspberryPi_JetsonNano/python/example
 crontab mycron
 rm mycron
 
-sudo pip3 install bottle
+
