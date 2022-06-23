@@ -29,7 +29,7 @@ def boot():
     Limage = Image.open(os.path.join(picdir, 'pupper.bmp'))
     draw = ImageDraw.Draw(Limage)
     draw.text((20, 25), 'my ip address is', font = font18, fill = 0)
-    draw.text((20, 50), str(ipadd), font = font18, fill = 0)
+    draw.text((20, 50), str(ipadd)+':8080     use /change/[filename] to change my picture', font = font18, fill = 0)
     epd.display(epd.getbuffer(Limage))
     epd.sleep()
 try:
